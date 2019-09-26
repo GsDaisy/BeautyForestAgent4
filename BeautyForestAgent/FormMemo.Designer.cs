@@ -31,7 +31,7 @@
             this.Status = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.loadFileDlg = new System.Windows.Forms.OpenFileDialog();
-            this.savaFileDlg = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.tabMode = new System.Windows.Forms.TabControl();
             this.tpRead = new System.Windows.Forms.TabPage();
             this.tbWrite = new System.Windows.Forms.TabPage();
@@ -71,9 +71,9 @@
             this.loadFileDlg.FileName = "openFileDialog1";
             this.loadFileDlg.Filter = "텍스트 파일(*.txt)|*.txt|모든파일 (*.*)|*.*";
             // 
-            // savaFileDlg
+            // saveFileDlg
             // 
-            this.savaFileDlg.Filter = "텍스트 파일(*.txt)|*.txt";
+            this.saveFileDlg.Filter = "텍스트 파일(*.txt)|*.txt";
             // 
             // tabMode
             // 
@@ -130,6 +130,7 @@
             this.btnLoadFileSelect.TabIndex = 1;
             this.btnLoadFileSelect.Text = "파일 선택";
             this.btnLoadFileSelect.UseVisualStyleBackColor = true;
+            this.btnLoadFileSelect.Click += new System.EventHandler(this.BtnLoadFileSelect_Click);
             // 
             // btnLoadFile
             // 
@@ -139,6 +140,7 @@
             this.btnLoadFile.TabIndex = 2;
             this.btnLoadFile.Text = "불러오기";
             this.btnLoadFile.UseVisualStyleBackColor = true;
+            this.btnLoadFile.Click += new System.EventHandler(this.BtnLoadFile_Click);
             // 
             // txtLoadText
             // 
@@ -175,6 +177,7 @@
             this.btnSaveFileSelect.TabIndex = 2;
             this.btnSaveFileSelect.Text = "파일 선택";
             this.btnSaveFileSelect.UseVisualStyleBackColor = true;
+            this.btnSaveFileSelect.Click += new System.EventHandler(this.BtnSaveFileSelect_Click);
             // 
             // btnSaveFile
             // 
@@ -184,6 +187,7 @@
             this.btnSaveFile.TabIndex = 3;
             this.btnSaveFile.Text = "저장하기";
             this.btnSaveFile.UseVisualStyleBackColor = true;
+            this.btnSaveFile.Click += new System.EventHandler(this.BtnSaveFile_Click);
             // 
             // FormMemo
             // 
@@ -212,7 +216,7 @@
         private System.Windows.Forms.StatusStrip Status;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.OpenFileDialog loadFileDlg;
-        private System.Windows.Forms.SaveFileDialog savaFileDlg;
+        private System.Windows.Forms.SaveFileDialog saveFileDlg;
         private System.Windows.Forms.TabControl tabMode;
         private System.Windows.Forms.TabPage tpRead;
         private System.Windows.Forms.TabPage tbWrite;
